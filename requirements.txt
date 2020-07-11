@@ -1,4 +1,4 @@
-# https://github.com/Ustrif/Ins-Spam/ 'ın ekidir.
+# https://github.com/Ustrif/Ins-Spamv2/ 'ın ekidir.
 colorama
 selenium
 argparse
