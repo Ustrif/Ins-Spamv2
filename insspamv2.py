@@ -77,7 +77,7 @@ class insspam():
         log("Browser harekete geçti.")
         self.options = Options()
         self.options.headless = True
-        self.browser = webdriver.Chrome()
+        self.browser = webdriver.Chrome(options=self.options)
         self.url = "https://www.instagram.com/accounts/login/?next=/users/{}/report/".format(string)
         self.browser.get(self.url)
         time.sleep(3)
