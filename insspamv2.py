@@ -1,6 +1,33 @@
 #/usr/bin/env python3
 #coding = "utf-8"
 
+"""
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+"""
+
+try:
+    from selenium import webdriver
+    import re
+    import argparse
+    import os
+    import colorama
+    from selenium.webdriver.chrome.options import Options
+    open("kullanicilar.txt","r", encoding= "utf-8")
+    open("şifreler.txt","r", encoding= "utf-8")
+except ModuleNotFoundError:
+    print("* Modüllerden biri sisteminizde bulunmamaktadır. Yüklemek için : pip install -r requirements.txt")
+    input("* Bir tuşa basın ve modülleri yükleyin.")
+    exit()
+except FileNotFoundError:
+    print("* kullanicilar.txt veya şifreler.txt programın bulunduğu dizinde yoktur.")
+    input("* Bir tuşa basın ve yazılımı sonlandırın.")
+    exit()
+
 from datetime import datetime
 from colorama import Fore, init
 from selenium import webdriver
@@ -19,25 +46,6 @@ def uyar(metin1):
 
 def bildirim(metin2):
     print(Fore.GREEN + "* " + metin2)
-    
-def chechmod():
-    try:
-        from selenium import webdriver
-        import re
-        import argparse
-        import os
-        import colorama
-        from selenium.webdriver.chrome.options import Options
-        open("kullanicilar.txt","r", encoding= "utf-8")
-        open("şifreler.txt","r", encoding= "utf-8")
-    except ModuleNotFoundError:
-        print("* Modüllerden biri sisteminizde bulunmamaktadır. Yüklemek için : pip install -r requirements.txt")
-        input("* Bir tuşa basın ve modülleri yükleyin.")
-        exit()
-    except FileNotFoundError:
-        print("* kullanicilar.txt veya şifreler.txt programın bulunduğu dizinde yoktur.")
-        input("* Bir tuşa basın ve yazılımı sonlandırın.")
-        exit()
     
 def log(yazı):
     filesss = open("log.txt","a", encoding= "utf-8")
@@ -198,7 +206,6 @@ def inpu():
 if __name__ == "__main__":
     bassaniye = time.time()
     log("Modüller kontrol ediliyor.")
-    chechmod()
     veri = argparse.ArgumentParser(add_help=True, epilog="İşlem bittikten sonra log.txt dosyasından yaptıklarını okuyabilirsiniz.", usage="Bu şekilde kullanabilirsiniz: python insspamv2.py -n 10hanelinumara", description="""İnstagram da bir hesaba spam atmak için kullanabilirsiniz. ZuL-RaA tarafından kodlanmıştır. İletişim : https://t.me/atmaca7887""")
     veri.add_argument("-n", help="Kullanıcının İd Numarası")
     options = veri.parse_args()
