@@ -1,5 +1,6 @@
 # Ins-Spamv2
-Ins-Spam yazılımının 2. versiyonudur. Birinci versiyona ulaşmak için : https://github.com/Ustrif/Ins-Spam
+Ins-Spam yazılımının 2. versiyonudur. Birinci versiyona ulaşmak için: https://github.com/Ustrif/Ins-Spam
+Bu yazının forum versiyonuna ulaşmak için: https://www.turkhackteam.org/python/1931962-instagram-spam-botun-2-surumu-ins-spamv2.html
 
 **Neler Yeni**
 
@@ -86,7 +87,9 @@ En son log.txt deki günlüğü okuyabilirsiniz.
 **İletişim**
 
 https://t.me/atmaca7887
+
 https://turkhackteam.org/members/818472.html
+
 https://twitter.com/Atmaca7887
 
 **Not: Kötüye kullanımda sorumluluk kabul etmemekle beraber yaptığınız her şeyden siz sorumlusunuz.**
